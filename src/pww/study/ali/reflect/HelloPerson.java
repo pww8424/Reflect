@@ -2,7 +2,7 @@ package pww.study.ali.reflect;
 
 import java.lang.reflect.Constructor;
 
-// 使锟斤拷Class实锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷时,一锟斤拷要锟斤拷锟斤拷一锟斤拷锟睫诧拷锟斤拷锟侥癸拷锟届函锟斤拷;
+// 使用Class实例化其他对象时,一定要定义一个无参数的构造函数;
 public class HelloPerson {
 	public static void main(String[] args) {
 		Class<?> demo = null;
@@ -16,7 +16,7 @@ public class HelloPerson {
 		Person per2 = null;
 		Person per3 = null;
 		Person per4 = null;
-		// 取锟斤拷全锟斤拷锟侥癸拷锟届函锟斤拷;
+		// 取得全部的构造函数;
 		Constructor<?> cons[] = demo.getConstructors();
 		try {
 			person = (Person) demo.newInstance();
@@ -35,6 +35,5 @@ public class HelloPerson {
 		System.out.println(per3);
 		System.out.println(per4);
 		// add comment in Eclipse.
-		// add comment in Github.
 	}
 }
